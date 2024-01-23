@@ -12,7 +12,7 @@ object Spark01_RDD_Memory_Par1 {
     val sc = new SparkContext(sparkConf)
 
     // TODO 创建RDD
-    val rdd = sc.makeRDD(List(1, 2, 3, 4), 2)
+    val rdd = sc.makeRDD(List(1, 2, 3, 4, 5), 3)
 
     // 删除上一次生成的output文件夹
     val path: File = new File("output")
@@ -23,8 +23,6 @@ object Spark01_RDD_Memory_Par1 {
     // TODO 关闭环境
     sc.stop()
   }
-
-
 }
 
 

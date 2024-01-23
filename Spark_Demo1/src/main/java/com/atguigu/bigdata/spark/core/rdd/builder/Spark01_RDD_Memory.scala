@@ -5,7 +5,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object Spark01_RDD_Memory {
   def main(args: Array[String]): Unit = {
-
     // TODO 准备环境
     val sparkConf = new SparkConf().setMaster("local[*]").setAppName("RDD")
     val sc = new SparkContext(sparkConf)
@@ -14,7 +13,7 @@ object Spark01_RDD_Memory {
     val seq = Seq[Int](1,2,3,4)
 
     // parallelize: 并行
-//    val rdd:RDD[Int] = sc.parallelize(seq)
+    // val rdd:RDD[Int] = sc.parallelize(seq)
 
     // makeRdd方法在底层其实就是调用了parallelize方法
     val rdd:RDD[Int] = sc.makeRDD(seq)

@@ -10,7 +10,6 @@ object Spark02_RDD_File1 {
     val sparkConf = new SparkConf().setMaster("local[*]").setAppName("RDD")
     val sc = new SparkContext(sparkConf)
     // TODO 创建RDD
-
     // testFile: 以行为单位读取数据
     // wholeTextFiles: 以文件为单位读取数据
     //    读取的结果表示为元祖, 第一个元素表示文件路径, 第二个元素表示文件内容

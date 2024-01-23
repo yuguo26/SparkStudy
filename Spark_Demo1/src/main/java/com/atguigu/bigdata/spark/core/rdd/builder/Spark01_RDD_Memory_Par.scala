@@ -17,8 +17,8 @@ object Spark01_RDD_Memory_Par {
     // makeRDD的第二个参数表示分区的数量
     // 第二个参数是可以不传递的, 如果不传递是默认值: defaultParallelism(默认值)
     // spark在默认情况下,从配置对象中获取配置参数: spark.default.parallelism, 如果获取不到,那么使用totalCores属性, 这个属性取值为当前运行环境的最大可用核数
-//    val rdd = sc.makeRDD(List(1,2,3,4), 2)
-    val rdd = sc.makeRDD(List(1,2,3,4))
+    val rdd = sc.makeRDD(List(1,2,3,4), 2)
+//    val rdd = sc.makeRDD(List(1,2,3,4))
 
     rdd.saveAsTextFile("output")
 
