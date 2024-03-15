@@ -19,7 +19,7 @@ object Spark01_RDD_Part {
 
     val parRDD: RDD[(String, String)] = rdd.partitionBy(new MyPartitioner)
 
-    parRDD.saveAsTextFile("output11")
+    parRDD.saveAsTextFile("output1")
     parRDD.collect().foreach(println)
     sc.stop()
   }
@@ -32,7 +32,6 @@ object Spark01_RDD_Part {
     override def numPartitions: Int = 3
 
     // 根据数据的key值返回数据的分区索引(从0开始)
-
     override def getPartition(key: Any): Int = {
       key match {
         case "nba" => 0
